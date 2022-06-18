@@ -12,25 +12,32 @@
     <title>Document</title>
 </head>
 <body>
-    <header><h1><span class="green">ROCK</span> <span class="blue">PAPER</span><span class="red"> SCISSORS</span></h1></header>
-    <main>
-      <div id="enemy-div">
-        <div class="rock"><img src="./images/enemy-rock.png" alt="rock hand"></div>
-        <p id="enemy-play" class="">The enemy chose rock</p>
-      </div>
-      <div id="player-div">
-        <div class="rock"><img src="./images/rock.png" alt="rock hand"></div>
-        <div class="paper"><img src="./images/paper.png" alt="paper hand"></div>
-        <div class="scissors"><img src="./images/scissors.png" alt="scissors hand"></div>
-      </div>
-        <p id="comment">Choose one!</p>
-        <div id="scoreboard">
-          <p>Your score: <span class="score">0</span></p>
-          <p>Computer Score: <span class="computer-score">0<span></p>
-        </div>
-    </main>
-    <footer>
-      <p>RickyLobo626 | The Odin Project</p>
-    </footer>
+  <header>
+    <h1>
+      <span class="green">ROCK</span>
+      <span class="blue">PAPER</span>
+      <span class="red"> SCISSORS</span>
+    </h1>
+  </header>
+  <main>
+    <div id="enemy" class="hidden">
+      <img id="enemy-img" class="hidden" src="./images/enemy-rock.png" alt="enemy hand">
+    </div>
+    <p id="enemy-comment" class="hidden">The enemy chose rock</p>
+    <p id="result" class="hidden">YOU WIN!</p>
+    <div id="player-div">
+      <div class="rock"><img src="./images/rock.png" alt="rock hand"></div>
+      <div class="paper"><img src="./images/paper.png" alt="paper hand"></div>
+      <div class="scissors"><img src="./images/scissors.png" alt="scissors hand"></div>
+    </div>
+    <p id="comment">Choose one!</p>
+    <div id="scoreboard">
+      <p>Your score: <span class="score">0</span></p>
+      <p>Computer Score: <span class="enemy-score">0<span></p>
+    </div>
+  </main>
+  <footer>
+    <p>RickyLobo626 | The Odin Project</p>
+  </footer>
 </body>
 </html>
