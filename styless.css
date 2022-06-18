@@ -1,0 +1,113 @@
+html {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: 'Lilita One', cursive, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #c7c0ad;
+  background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  height: 2rem;
+  bottom: 0;
+  text-align: center;
+}
+
+footer p {
+  line-height: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+#player-div {
+  display: flex;
+  gap: 5rem;
+}
+
+#scoreboard {
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  margin: 1rem;
+  letter-spacing: 1px;
+  word-spacing: 15px;
+}
+
+#scoreboard p {
+  display: inline-block;
+}
+
+.rock, .paper, .scissors {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#enemy-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#comment {
+  font-size: 1.5rem;
+}
+
+.rock img {
+  width: 90%;
+}
+
+.paper img {
+  width: 100%;
+}
+
+.scissors img {
+  width: 80%;
+}
+
+.green {
+  color: rgb(60, 168, 60);
+}
+
+.red {
+  color: rgb(201, 48, 48);
+}
+
+.blue {
+  color: rgb(55, 133, 223);
+}
+
+.hidden {
+  display: none;
+}

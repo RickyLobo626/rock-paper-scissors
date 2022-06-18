@@ -5,9 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styless.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header><h1><span class="green">ROCK</span> <span class="blue">PAPER</span><span class="red"> SCISSORS</span></h1></header>
+    <main>
+      <div id="enemy-div">
+        <div class="rock"><img src="./images/enemy-rock.png" alt="rock hand"></div>
+        <p id="enemy-play" class="">The enemy chose rock</p>
+      </div>
+      <div id="player-div">
+        <div class="rock"><img src="./images/rock.png" alt="rock hand"></div>
+        <div class="paper"><img src="./images/paper.png" alt="paper hand"></div>
+        <div class="scissors"><img src="./images/scissors.png" alt="scissors hand"></div>
+      </div>
+        <p id="comment">Choose one!</p>
+        <div id="scoreboard">
+          <p>Your score: <span class="score">0</span></p>
+          <p>Computer Score: <span class="computer-score">0<span></p>
+        </div>
+    </main>
+    <footer>
+      <p>RickyLobo626 | The Odin Project</p>
+    </footer>
 </body>
 </html>

@@ -1,8 +1,19 @@
 'use strict';
 
+const playerBtn = document.querySelectorAll('#player-div > div');
+const comment = document.getElementById('comment');
 let playerPick, computerPick;
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
+
+playerBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    playerPick = btn.className;
+    computerPick = computerPlay();
+    console.log(playerPick + ' ' + computerPick);
+    playRound();
+  });
+});
 
 // Random computer play
 function computerPlay() {
@@ -10,35 +21,34 @@ function computerPlay() {
   return playArray[Math.floor(Math.random() * 3)];
 }
 
-// Play round
-function playRound(playerSelection, computerSelection) {
-  let lowerStr = playerSelection.toLowerCase();
-
-  if (playerWinsRound(lowerStr, computerSelection)) {
+// Play rounds
+function playRound() {
+  if (playerWinsRound()) {
     playerScore++;
-    return `You won this round! The computer chose ${computerSelection}.`;
-  } else if (isTie(lowerStr, computerSelection)) {
-    return `It's a tie. The computer also chose ${computerSelection}`;
+    comment.textContent = `You won this round! The enemy chose ${computerPick}.`;
+    return;
+  } else if (isTie()) {
+    comment.textContent = `It's a tie. The enemy also chose ${computerPick}`;
+    return;
   }
   computerScore++;
-  return `You lose the round! The computer chose ${computerSelection}.`;
-  }
+  comment.textContent = `You lose the round! The enemy chose ${computerPick}.`;
+  return;
+}
 
 // Check if player wins the round
-function playerWinsRound(playerSelection, computerSelection) {
-  if (
-    playerSelection == 'rock' && computerSelection == 'scissors' ||
-    playerSelection == 'paper' && computerSelection == 'rock' ||
-    playerSelection == 'scissors' && computerSelection == 'paper'
-  ) {
+function playerWinsRound() {
+  if (playerPick == 'rock' && computerPick == 'scissors' ||
+    playerPick == 'paper' && computerPick == 'rock' ||
+    playerPick == 'scissors' && computerPick == 'paper') {
     return true;
   }
   return false;
 }
 
 // Check if it's a Tie
-function isTie(playerSelection, computerSelection) {
-  if (playerSelection == computerSelection) {
+function isTie() {
+  if (playerPick == computerPick) {
     return true;
   }
   return false;
@@ -53,19 +63,3 @@ function checkWinner() {
   }
   return 'DRAW!';
 }
-
-// Start game
-function game() {
-  playerScore = 0;
-  computerScore = 0;
-  for (let i = 0; i < 5; i++) {
-    playerPick = prompt('Rock, paper or scissors?');
-    computerPick = computerPlay();
-    console.log(playRound(playerPick, computerPick));
-    console.log(`Your Score: ${playerScore} | Computer Score: ${computerScore}`);
-  }
-  return checkWinner();
-}
-
-console.log(game());
-
