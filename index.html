@@ -20,20 +20,25 @@
     </h1>
   </header>
   <main>
-    <div id="enemy" class="hidden">
-      <img id="enemy-img" class="hidden" src="./images/enemy-rock.png" alt="enemy hand">
+    <div id="game">
+      <div id="enemy">
+        <img id="enemy-img" class="hidden" src="./images/enemy-rock.png" alt="enemy hand">
+      </div>
+      <p id="enemy-comment"></p>
+      <div id="player-div">
+        <div class="rock"><img src="./images/rock.png" alt="rock hand"></div>
+        <div class="paper"><img src="./images/paper.png" alt="paper hand"></div>
+        <div class="scissors"><img src="./images/scissors.png" alt="scissors hand"></div>
+      </div>
+      <p id="comment">Choose one!</p>
+      <div id="scoreboard">
+        <p class="green">Your score: <span class="score">0</span></p>
+        <p class="red">Computer Score: <span class="enemy-score">0<span></p>
+      </div>
     </div>
-    <p id="enemy-comment" class="hidden">The enemy chose rock</p>
-    <p id="result" class="hidden">YOU WIN!</p>
-    <div id="player-div">
-      <div class="rock"><img src="./images/rock.png" alt="rock hand"></div>
-      <div class="paper"><img src="./images/paper.png" alt="paper hand"></div>
-      <div class="scissors"><img src="./images/scissors.png" alt="scissors hand"></div>
-    </div>
-    <p id="comment">Choose one!</p>
-    <div id="scoreboard">
-      <p>Your score: <span class="score">0</span></p>
-      <p>Computer Score: <span class="enemy-score">0<span></p>
+    <div id="post-game">
+      <p id="result"></p>
+      <button id="restart" class="hidden">Play Again</button>
     </div>
   </main>
   <footer>
