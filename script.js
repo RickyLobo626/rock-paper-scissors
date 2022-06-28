@@ -1,6 +1,6 @@
 'use strict';
 
-const playerBtn = document.querySelectorAll('#player-div > div');
+const playerBtn = document.querySelectorAll('.buttons > div');
 const comment = document.getElementById('comment');
 const enemyImg = document.getElementById('enemy-img');
 const enemyImgDiv = document.querySelector('#enemy-div > div');
