@@ -3,7 +3,7 @@
 const playerBtn = document.querySelectorAll('#player-div > div');
 const comment = document.getElementById('comment');
 const enemyImg = document.getElementById('enemy-img');
-const enemyDiv = document.querySelector('#enemy');
+const enemyImgDiv = document.querySelector('#enemy-div > div');
 const enemyComment = document.querySelector('#enemy-comment');
 const scoreSpan = document.querySelector('.score');
 const enemyScoreSpan = document.querySelector('.enemy-score');
@@ -27,11 +27,11 @@ playerBtn.forEach(btn => {
       enemyImg.classList.remove('hidden');
 
       // Add and remove classes
-      if (enemyDiv.classList.contains(enemyDiv.className)) {
-        enemyDiv.classList.remove(enemyDiv.className);
-        enemyDiv.classList.add(computerPick);
+      if (enemyImgDiv.classList.contains(enemyImgDiv.className)) {
+        enemyImgDiv.classList.remove(enemyImgDiv.className);
+        enemyImgDiv.classList.add(computerPick);
       } else {
-        enemyDiv.classList.add(computerPick);
+        enemyImgDiv.classList.add(computerPick);
       }
 
       playRound();
