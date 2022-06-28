@@ -110,7 +110,7 @@ footer p {
   min-width: 250px;
   display: flex;
   justify-content: space-around;
-  gap: 0.5rem;
+  gap: 1.5rem;
   padding: 0.2rem 0.8rem;
   border-radius: 1rem;
   text-align: center;
