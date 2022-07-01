@@ -78,10 +78,11 @@ h1 {
   width: 140px;
 }
 
-#enemy-comment {
+#enemy-comment, #comment {
   max-width: 350px;
   min-width: 235px;
   text-align: center;
+  text-shadow: 0 0 5px white;
 }
 
 #player-div {
@@ -96,12 +97,6 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 17%;
-}
-
-#comment {
-  max-width: 360px;
-  min-width: 200px;
-  text-align: center;
 }
 
 #scoreboard {
