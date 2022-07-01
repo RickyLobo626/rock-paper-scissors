@@ -22,7 +22,7 @@ body {
 }
 
 header {
-  margin-top: 0.5rem;
+  margin: 10px 0 20px;
 }
 
 main {
@@ -38,10 +38,9 @@ footer {
   color: black;
   background-color: #b1b1b188;
   width: 100%;
-  position: fixed;
-  bottom: 0;
   box-shadow: 0 0 10px black;
   text-align: center;
+  margin-top: 20px;
 }
 
 h1 {
